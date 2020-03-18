@@ -1,7 +1,7 @@
-import React from "react";
+import React, {memo} from "react";
 import './todoItem.css'
 
-export default ({item, handleRemove, handleToggle}) =>
+export default memo(({item, handleRemove, handleToggle}) =>
   <div className={'todo-item'}>
     <input
       type="radio"
@@ -17,3 +17,4 @@ export default ({item, handleRemove, handleToggle}) =>
     </p>
     <span onClick={handleRemove.bind(null, item.id)}>X</span>
   </div>
+)
