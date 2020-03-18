@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="11f7eccb-2929-4c70-93b8-3788b9ff81af" name="Default Changelist" comment="init redux">
+      <change afterPath="$PROJECT_DIR$/src/reducers/filterReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/todoReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todoList/todoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ZJ89L1ByRIr6WQ73Wgy7AkY0Rm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11f7eccb-2929-4c70-93b8-3788b9ff81af" name="Default Changelist" comment="" />
+      <created>1563246923498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563246923498</updated>
+      <workItem from="1563246924685" duration="459000" />
+      <workItem from="1563345409627" duration="10163000" />
+      <workItem from="1563355669729" duration="664000" />
+      <workItem from="1563519130517" duration="257000" />
+      <workItem from="1584545685588" duration="3639000" />
+      <workItem from="1584549364123" duration="66000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1608" y="148" width="860" height="810" key="CommitChangelistDialog2" timestamp="1584549322810">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state x="1608" y="148" width="860" height="810" key="CommitChangelistDialog2/67.27.2493.1053@67.27.2493.1053" timestamp="1584549322810" />
+    <state x="1826" y="311" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584549112953">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state x="1826" y="311" width="424" height="484" key="FileChooserDialogImpl/67.27.2493.1053@67.27.2493.1053" timestamp="1584549112953" />
+    <state x="1567" y="284" width="704" height="538" key="find.popup" timestamp="1584545835427">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state x="1567" y="284" width="704" height="538" key="find.popup/67.27.2493.1053@67.27.2493.1053" timestamp="1584545835427" />
+  </component>
+</project>
