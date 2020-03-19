@@ -1,8 +1,14 @@
 import React, {memo} from "react";
+import {useDispatch} from "react-redux";
+import {toggleTodo, removeTodo} from '../../actions/todoActions';
 import './todoItem.css'
 
-export default memo(({item, handleRemove, handleToggle}) =>
-  <div className={'todo-item'}>
+export default memo(({item}) => {
+  const dispatch = useDispatch();
+  const {id} = item;
+  const onToggle = () => dispatch(toggleTodo(id));
+  const onRemove = () => dispatch(removeTodo(id));
+  return <div className={'todo-item'}>
     <input
       type="radio"
       className={'todo-item-input'}
@@ -10,11 +16,11 @@ export default memo(({item, handleRemove, handleToggle}) =>
       readOnly={true}
     />
     <p
-      onClick={handleToggle.bind(null, item.id)}
+      onClick={onToggle}
       className={item.finish ? 'finish' : ''}
     >
       {item.content}
     </p>
-    <span onClick={handleRemove.bind(null, item.id)}>X</span>
+    <span onClick={onRemove}>X</span>
   </div>
-)
+})

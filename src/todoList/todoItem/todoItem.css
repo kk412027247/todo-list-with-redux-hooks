@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 700px;
+    width: 400px;
+    padding-right: 50px;
 }
-
 
 
 .todo-item p {
@@ -13,17 +13,18 @@
     margin: 0 20px;
 }
 
-.todo-item .finish{
-    text-decoration:line-through
+.todo-item .finish {
+    text-decoration: line-through
 }
 
 
- .todo-item span {
-     font-size: 30px;
-     color: darkred;
- }
+.todo-item span {
+    font-size: 30px;
+    color: darkred;
+}
 
-.todo-item span:hover {
+.todo-item p, .todo-item span:hover {
     cursor: pointer;
+    user-select:none;
 }
 

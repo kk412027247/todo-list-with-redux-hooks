@@ -1,109 +1,55 @@
-import React, {useState, useCallback} from 'react';
-import {useSelector} from "react-redux";
+import React, {useState, useCallback, useMemo, useEffect} from 'react';
+import {useSelector, useDispatch} from "react-redux";
+import {createSelector} from 'reselect'
 import TodoItem from './todoItem/todoItem';
+import {addTodo} from '../actions/todoActions';
 import './todoList.css'
 
-let i = 0;
-//
-//
-// export default class TodoList extends React.Component {
-//
-//   state = {
-//     list: [{id: 0, content: 'hehe', finish: true}],
-//     value: '',
-//     status:'all',
-//   };
-//
-//   handleInput = (event) => {
-//     this.setState({value: event.target.value})
-//   };
-//
-//   handleAdd = () => {
-//     const {value, list} = this.state;
-//     if (value === '') {
-//       return
-//     }
-//     const newList = [...list, {content: value, finish: false, id: ++i}];
-//     this.setState({list: newList, value: ''});
-//   };
-//
-//   handleRemove = (id) => {
-//     const list = this.state.list.filter(item => item.id !== id);
-//     this.setState({list})
-//   };
-//
-//   handleToggle = (id) => {
-//     const list = this.state.list.map(item => {
-//       if (item.id === id) {
-//         return {
-//           ...item, finish: !item.finish
-//         }
-//       }
-//       return item;
-//     });
-//     this.setState({list})
-//   };
-//
-//   handleStatus = (status) => {
-//     this.setState({status})
-//   };
-//
-//   render() {
-//     const {value, list, status} = this.state;
-//     return (
-//       <div className={'todo-list'}>
-//         <input
-//           type="text"
-//           className={'todo-list-input'}
-//           onChange={this.handleInput}
-//           value={value.slice(0, 20)}
-//         />
-//         <button
-//           className={'button'}
-//           onClick={this.handleAdd}
-//         >
-//           新增
-//         </button>
-//         <div className={'button-group'}>
-//           <button onClick={this.handleStatus.bind(null, 'all')}>全部</button>
-//           <button onClick={this.handleStatus.bind(null,'finished')}>已完成</button>
-//           <button onClick={this.handleStatus.bind(null,'unfinishde')}>未完成</button>
-//         </div>
-//         {
-//           list.filter(item=>{
-//             if(status === 'all'){
-//               return true
-//             }else if (status === 'finished') {
-//               return item.finish
-//             }else{
-//               return !item.finish
-//             }
-//           }).map(item =>
-//             <TodoItem
-//               item={item}
-//               key={item.id}
-//               handleRemove={this.handleRemove}
-//               handleToggle={this.handleToggle}
-//             />
-//           )
-//         }
-//
-//       </div>
-//     )
-//   }
-// }
 
-const fn = () => {
-}
+const selectList = createSelector(
+  state => state.filterType.filterType,
+  state => state.todo.todoList,
+  (_, props) => console.log('say:', props),
+  (filterType, todoList) => {
+    console.log('calculation from reselect');
+    return todoList.filter(item => {
+      return filterType === 'all' ? true : filterType === 'finished' ? item.finish : !item.finish
+    })
+  }
+);
 
 export default () => {
-
-  const [value, setValue] = useState('do nothings');
-  const handleInput = useCallback((event) => setValue(event.target.value),[]);
-
+  const [value, setValue] = useState('nothings');
+  const handleInput = useCallback((event) => setValue(event.target.value), []);
+  const dispatch = useDispatch();
+  const onAddTodo = () => {
+    dispatch(addTodo(value));
+    setValue('')
+  };
 
   const todoList = useSelector(state => state.todo.todoList);
-  const status = 'all'
+  const filterType = useSelector(state => state.filterType.filterType);
+  const list2 = useMemo(() => {
+    console.log('calculation from using memory');
+    return todoList.filter(item => {
+      return filterType === 'all' ? true : filterType === 'finished' ? item.finish : !item.finish
+    })
+  }, [todoList, filterType]);
+
+  // const list = useSelector(selectList);
+  const list = useSelector(state => selectList(state, 'hey'));
+
+  useEffect(() => {
+    console.log('update')
+  });
+
+  useEffect(() => {
+    console.log('component did mount');
+    return () => {
+      console.log('component will unmount');
+    }
+  }, []);
+
 
   return <div className={'todo-list'}>
     <input
@@ -114,33 +60,20 @@ export default () => {
     />
     <button
       className={'button'}
-      onClick={fn}
+      onClick={onAddTodo}
     >
       新增
     </button>
-    <div className={'button-group'}>
-      <button onClick={fn}>全部</button>
-      <button onClick={fn}>已完成</button>
-      <button onClick={fn}>未完成</button>
+    <div className='list-group'>
+      <div className='list-group-left'>
+        {list.map(item => <TodoItem item={item} key={item.id}/>)}
+      </div>
+      <div>
+        {list2.map(item => <TodoItem item={item} key={item.id}/>)}
+      </div>
+
     </div>
-    {
-      todoList.filter(item => {
-        if (status === 'all') {
-          return true
-        } else if (status === 'finished') {
-          return item.finish
-        } else {
-          return !item.finish
-        }
-      }).map(item =>
-        <TodoItem
-          item={item}
-          key={item.id}
-          handleRemove={fn}
-          handleToggle={fn}
-        />
-      )
-    }
+
 
   </div>
 

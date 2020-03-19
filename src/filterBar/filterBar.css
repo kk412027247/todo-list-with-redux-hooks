@@ -1,0 +1,10 @@
+.button-group {
+    margin: 100px 0 100px 100px;
+}
+
+.button-group button {
+    height: 50px;
+    width: 100px;
+    font-size: 18px;
+    margin-right: 30px;
+}

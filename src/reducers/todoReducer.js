@@ -22,7 +22,7 @@ export default (state = {}, action) => {
         todoList: state.todoList.filter(item => item.id !== action.id)
       }
     }
-    
+
     default:
       return state;
   }

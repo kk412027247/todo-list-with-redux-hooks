@@ -5,14 +5,14 @@ import filterReducer from "../reducers/filterReducer";
 
 const reducer = combineReducers({
   todo: todoReducer,
-  filter: filterReducer
+  filterType: filterReducer
 });
 
 const initState = {
   todo: {
-    todoList: [{id: 0, content: 'hehe', finish: true}]
+    todoList: [{id: 0, content: 'being suck', finish: true}]
   },
-  filter: {
+  filterType: {
     filterType: 'all'
   }
 };
