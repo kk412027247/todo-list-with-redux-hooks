@@ -2,7 +2,7 @@ import React, {useState, useCallback, useMemo, useEffect} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {createSelector} from 'reselect'
 import TodoItem from './todoItem/todoItem';
-import {addTodo} from '../actions/todoActions';
+import {addTodo, delayAddTodo} from './todoListSlice';
 import './todoList.css'
 
 
@@ -23,7 +23,14 @@ export default () => {
   const handleInput = useCallback((event) => setValue(event.target.value), []);
   const dispatch = useDispatch();
   const onAddTodo = () => {
+    if(!value)return;
     dispatch(addTodo(value));
+    setValue('')
+  };
+
+  const onDelayAddTodo = () =>{
+    if(!value)return;
+    dispatch(delayAddTodo(value));
     setValue('')
   };
 
@@ -58,12 +65,20 @@ export default () => {
       onChange={handleInput}
       value={value.slice(0, 20)}
     />
-    <button
-      className={'button'}
-      onClick={onAddTodo}
-    >
-      新增
-    </button>
+    <div className='add-button-group'>
+      <button
+        className={'button'}
+        onClick={onAddTodo}
+      >
+        新增
+      </button>
+      <button
+        className={'button'}
+        onClick={onDelayAddTodo}
+      >
+        等下再加
+      </button>
+    </div>
     <div className='list-group'>
       <div className='list-group-left'>
         {list.map(item => <TodoItem item={item} key={item.id}/>)}

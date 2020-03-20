@@ -1,6 +1,6 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {handleFilterType} from '../actions/filterActions';
+import {handleFilterType} from './filterBarSlice';
 import './filterBar.css'
 
 export default () => {

@@ -1,6 +1,6 @@
 import React, {memo} from "react";
 import {useDispatch} from "react-redux";
-import {toggleTodo, removeTodo} from '../../actions/todoActions';
+import {toggleTodo, removeTodo} from '../todoListSlice';
 import './todoItem.css'
 
 export default memo(({item}) => {

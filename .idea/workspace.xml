@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11f7eccb-2929-4c70-93b8-3788b9ff81af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/filterActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/todoActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filterBar/filterBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filterBar/filterBar.js" afterDir="false" />
+    <list default="true" id="11f7eccb-2929-4c70-93b8-3788b9ff81af" name="Default Changelist" comment="integrate with reselect">
+      <change afterPath="$PROJECT_DIR$/src/feature/filterBar/filterBarSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/todoList/todoListSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/todoReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todoReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/textInput/textInput.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/textInput/textInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todoList/todoList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/todoList/todoList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todoList/todoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/filterActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/todoActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filterBar/filterBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/filterBar/filterBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filterBar/filterBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/filterBar/filterBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/filterReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/todoReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/todoList/todoItem/todoItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todoList/todoItem/todoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/todoList/todoItem/todoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todoList/todoList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/todoList/todoList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/todoList/todoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="original_redux" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZJ89L1ByRIr6WQ73Wgy7AkY0Rm" />
@@ -61,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/feature" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -91,7 +99,8 @@
       <workItem from="1563355669729" duration="664000" />
       <workItem from="1563519130517" duration="257000" />
       <workItem from="1584545685588" duration="3639000" />
-      <workItem from="1584549364123" duration="8857000" />
+      <workItem from="1584549364123" duration="12773000" />
+      <workItem from="1584713804402" duration="4647000" />
     </task>
     <task id="LOCAL-00001" summary="init redux">
       <created>1584549470792</created>
@@ -107,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584549683987</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="integrate with reselect">
+      <created>1584636317623</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584636317623</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,21 +132,42 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init redux" />
     <MESSAGE value="use memo" />
-    <option name="LAST_COMMIT_MESSAGE" value="use memo" />
+    <MESSAGE value="integrate with reselect" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate with reselect" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1608" y="148" width="860" height="810" key="CommitChangelistDialog2" timestamp="1584549683918">
+    <state x="1185" y="302" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584720169465">
       <screen x="67" y="27" width="2493" height="1053" />
     </state>
-    <state x="1608" y="148" width="860" height="810" key="CommitChangelistDialog2/67.27.2493.1053@67.27.2493.1053" timestamp="1584549683918" />
+    <state x="1185" y="302" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.2493.1053@67.27.2493.1053" timestamp="1584720169465" />
+    <state x="1608" y="148" width="860" height="810" key="CommitChangelistDialog2" timestamp="1584711100213">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state x="1608" y="148" width="860" height="810" key="CommitChangelistDialog2/67.27.2493.1053@67.27.2493.1053" timestamp="1584711100213" />
     <state x="1826" y="311" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584549112953">
       <screen x="67" y="27" width="2493" height="1053" />
     </state>
     <state x="1826" y="311" width="424" height="484" key="FileChooserDialogImpl/67.27.2493.1053@67.27.2493.1053" timestamp="1584549112953" />
-    <state x="1638" y="289" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584549748702">
+    <state width="1695" height="302" key="GridCell.Tab.0.bottom" timestamp="1584713707114">
       <screen x="67" y="27" width="2493" height="1053" />
     </state>
-    <state x="1638" y="289" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.2493.1053@67.27.2493.1053" timestamp="1584549748702" />
+    <state width="1695" height="302" key="GridCell.Tab.0.bottom/67.27.2493.1053@67.27.2493.1053" timestamp="1584713707114" />
+    <state width="1695" height="302" key="GridCell.Tab.0.center" timestamp="1584713707113">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state width="1695" height="302" key="GridCell.Tab.0.center/67.27.2493.1053@67.27.2493.1053" timestamp="1584713707113" />
+    <state width="1695" height="302" key="GridCell.Tab.0.left" timestamp="1584713707113">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state width="1695" height="302" key="GridCell.Tab.0.left/67.27.2493.1053@67.27.2493.1053" timestamp="1584713707113" />
+    <state width="1695" height="302" key="GridCell.Tab.0.right" timestamp="1584713707114">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state width="1695" height="302" key="GridCell.Tab.0.right/67.27.2493.1053@67.27.2493.1053" timestamp="1584713707114" />
+    <state x="1638" y="289" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584711371516">
+      <screen x="67" y="27" width="2493" height="1053" />
+    </state>
+    <state x="1638" y="289" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.2493.1053@67.27.2493.1053" timestamp="1584711371516" />
     <state x="1567" y="284" width="704" height="538" key="find.popup" timestamp="1584545835427">
       <screen x="67" y="27" width="2493" height="1053" />
     </state>

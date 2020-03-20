@@ -1,6 +1,6 @@
 import React from 'react';
-import TodoList from './todoList/todoList';
-import FilterBar from './filterBar/filterBar';
+import TodoList from './feature/todoList/todoList';
+import FilterBar from './feature/filterBar/filterBar';
 
 
 
