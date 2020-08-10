@@ -5,7 +5,7 @@ import './filterBar.css'
 
 export default () => {
   const dispatch = useDispatch();
-  const onHandleFilterType = (filterType) => dispatch(handleFilterType(filterType));
+  const onHandleFilterType = (filterType:string) => dispatch(handleFilterType(filterType));
   return <div className={'button-group'}>
     <button onClick={onHandleFilterType.bind(null, 'all')}>全部</button>
     <button onClick={onHandleFilterType.bind(null, 'finished')}>已完成</button>

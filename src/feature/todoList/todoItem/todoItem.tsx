@@ -1,9 +1,9 @@
 import React, {memo} from "react";
 import {useDispatch} from "react-redux";
-import {toggleTodo, removeTodo} from '../todoListSlice';
+import {toggleTodo, removeTodo, TodoItemType} from '../todoListSlice';
 import './todoItem.css'
 
-export default memo(({item}) => {
+const TodoItem:React.FC<{item:TodoItemType}> = ({item}) => {
   const dispatch = useDispatch();
   const {id} = item;
   const onToggle = () => dispatch(toggleTodo(id));
@@ -23,4 +23,6 @@ export default memo(({item}) => {
     </p>
     <span onClick={onRemove}>X</span>
   </div>
-})
+}
+
+export default memo(TodoItem)

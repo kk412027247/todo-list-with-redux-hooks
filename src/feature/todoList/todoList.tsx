@@ -3,13 +3,14 @@ import {useSelector, useDispatch} from "react-redux";
 import {createSelector} from 'reselect'
 import TodoItem from './todoItem/todoItem';
 import {addTodo, delayAddTodo} from './todoListSlice';
+import {RootState} from '../../store/store';
 import './todoList.css'
 
 
 const selectList = createSelector(
-  state => state.filterType.filterType,
-  state => state.todo.todoList,
-  (_, props) => console.log('say:', props),
+  (state:RootState)  => state.filterType.filterType,
+  (state:RootState)  => state.todo.todoList,
+  (_:RootState, props:string) => console.log('say:', props),
   (filterType, todoList) => {
     console.log('calculation from reselect');
     return todoList.filter(item => {
@@ -34,8 +35,8 @@ export default () => {
     setValue('')
   };
 
-  const todoList = useSelector(state => state.todo.todoList);
-  const filterType = useSelector(state => state.filterType.filterType);
+  const todoList = useSelector((state:RootState) => state.todo.todoList);
+  const filterType = useSelector((state:RootState)  => state.filterType.filterType);
   const list2 = useMemo(() => {
     console.log('calculation from using memory');
     return todoList.filter(item => {
@@ -44,7 +45,7 @@ export default () => {
   }, [todoList, filterType]);
 
   // const list = useSelector(selectList);
-  const list = useSelector(state => selectList(state, 'hey'));
+  const list = useSelector((state:RootState) => selectList(state, 'hey'));
 
   useEffect(() => {
     console.log('update')
@@ -88,8 +89,5 @@ export default () => {
       </div>
 
     </div>
-
-
   </div>
-
 }
